@@ -4,11 +4,8 @@ function initialize(){
     cities();
 	addColumns();
 	addEvents();
-<<<<<<< HEAD
 	jQueryAjax();
 	debugAjax();
-=======
->>>>>>> origin/master
 };
 
 //function to create a table with cities and their populations
@@ -107,7 +104,6 @@ function addColumns(cityPop){
 
 function addEvents(){
 // this function picks random rgb color each time when mouse moves over the table.
-<<<<<<< HEAD
 $('#mydiv').mouseover(function(){
 		
 		var color = "rgb(";
@@ -128,18 +124,6 @@ $('#mydiv').mouseover(function(){
 	$(this).css('color', color);
 		};
 	});
-=======
-	function Mouseoverme()
-	{
-// I changed another way to add random rgb, because I think the loop is with problem.	
-var color = 'rgb(' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255) + ')'
- 
-		$(this).css('color', color);
-	
-	};
-// add this color changing effect to the table
-	$('table').on('mouseover', Mouseoverme);
->>>>>>> origin/master
 	
 	
 		
@@ -153,7 +137,6 @@ var color = 'rgb(' + Math.round(Math.random() * 255) + ',' + Math.round(Math.ran
 };
 
 
-<<<<<<< HEAD
 //define AJAX function
 function jQueryAjax(){
     //define a variable to hold the data
@@ -195,7 +178,4 @@ function debugAjax(){
 
 	
 };
-=======
-
->>>>>>> origin/master
 
