@@ -4,6 +4,11 @@ function initialize(){
     cities();
 	addColumns();
 	addEvents();
+<<<<<<< HEAD
+	jQueryAjax();
+	debugAjax();
+=======
+>>>>>>> origin/master
 };
 
 //function to create a table with cities and their populations
@@ -102,6 +107,28 @@ function addColumns(cityPop){
 
 function addEvents(){
 // this function picks random rgb color each time when mouse moves over the table.
+<<<<<<< HEAD
+$('#mydiv').mouseover(function(){
+		
+		var color = "rgb(";
+
+		for (var i=0; i<3; i++){
+
+			var random = Math.round(Math.random() * 255);
+
+			color += random;
+
+			if (i<2){
+				color += ",";
+			
+			} else {
+				color += ")";
+		};
+      	
+	$(this).css('color', color);
+		};
+	});
+=======
 	function Mouseoverme()
 	{
 // I changed another way to add random rgb, because I think the loop is with problem.	
@@ -112,6 +139,7 @@ var color = 'rgb(' + Math.round(Math.random() * 255) + ',' + Math.round(Math.ran
 	};
 // add this color changing effect to the table
 	$('table').on('mouseover', Mouseoverme);
+>>>>>>> origin/master
 	
 	
 		
@@ -125,5 +153,49 @@ var color = 'rgb(' + Math.round(Math.random() * 255) + ',' + Math.round(Math.ran
 };
 
 
+<<<<<<< HEAD
+//define AJAX function
+function jQueryAjax(){
+    //define a variable to hold the data
+    var mydata;
 
+    //basic jQuery ajax method. One parameter is a URL string.
+    $.ajax("data/MegaCities.GeoJSON", {
+	//the settings object in the example above only has two properties: dataType and success.
+        dataType: "json",
+        success: function(response){
+		// in this function, response(mydata) is a parameter.
+            mydata = response;
+
+            //check the data. And mydata could be accessed here.
+            console.log(mydata);
+        }
+    });
+
+    //check the data. mydata is local variavle within funcion jQueryAjax so it's couldn't be accessed here. So it will show "undefine" here.
+    console.log(mydata);
+};
+
+
+
+function debugAjax(){
+	
+	var mydata;
+  //basic jQuery ajax method. One parameter is a URL string.
+	$.ajax("data/MegaCities.GeoJSON", {
+		//The settings object in the example above only has two properties: dataType and success.
+		dataType: "json",
+		success: function(response){
+		// in this funcion, mydata is a parameter.
+			 mydata = response;
+			 //add mydata as string to mydiv
+			$('#mydiv').append('<br>GeoJSON data:<br>' + JSON.stringify(mydata));
+		}
+	});
+
+	
+};
+=======
+
+>>>>>>> origin/master
 
