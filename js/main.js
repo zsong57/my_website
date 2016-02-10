@@ -151,7 +151,8 @@ function jQueryAjax(){
             mydata = response;
 
             //check the data. And mydata could be accessed here.
-            console.log(mydata);
+           console.log(JSON.stringify(response));
+			
         }
     });
 
